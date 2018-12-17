@@ -2,7 +2,8 @@
     <h1>~ worker ~</h1>
     <strong>Thread pool package for go routines</strong><br><br>
     <a href="https://godoc.org/github.com/zekroTJA/worker"><img src="https://img.shields.io/badge/docs-godoc-c918cc.svg" /></a>&nbsp;
-    <a href="https://travis-ci.org/zekroTJA/worker" ><img src="https://travis-ci.org/zekroTJA/worker.svg?branch=master" /></a>
+    <a href="https://travis-ci.org/zekroTJA/worker" ><img src="https://travis-ci.org/zekroTJA/worker.svg?branch=master" /></a>&nbsp;
+    <a href="https://coveralls.io/github/zekroTJA/worker"><img src="https://coveralls.io/repos/github/zekroTJA/worker/badge.svg" /></a>
 <br>
 </div>
 

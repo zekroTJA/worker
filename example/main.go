@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	worker ".."
+	"github.com/zekroTJA/worker"
 )
 
 func main() {

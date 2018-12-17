@@ -28,43 +28,43 @@ This is a leight go package to split work load into small tasks, which can be sp
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 
-	"github.com/zekroTJA/worker"
+    "github.com/zekroTJA/worker"
 )
 
 func main() {
     // Create worker instance
-	w := worker.NewWorker()
+    w := worker.NewWorker()
 
     // Define 50 Tasks, which should be proceed, and 
     // enqueue them in the workers queue
-	for j := 0; j < 50; j++ {
+    for j := 0; j < 50; j++ {
         task := worker.NewTask(func(args []interface{}) *worker.Result {
-			time.Sleep(1 * time.Second)
-			return worker.NewResult(args[0], nil)
-		}
-		w.Enqueue(task, j))
-	}
+            time.Sleep(1 * time.Second)
+            return worker.NewResult(args[0], nil)
+        }
+        w.Enqueue(task, j))
+    }
 
     // Define the result handler which will be executed each time
     // a worker has finished a task and returns a result instance
-	w.ResultHandler = func(r *worker.Result) {
-		fmt.Printf("Result: %d, Error: %v\n", r.Value, r.Error)
-	}
+    w.ResultHandler = func(r *worker.Result) {
+        fmt.Printf("Result: %d, Error: %v\n", r.Value, r.Error)
+    }
 
     // Define the finish handler which will be executed after all
     // tasks in the queue are finished
-	w.FinishedHandler = func() {
-		fmt.Println("finished task queue")
-	}
+    w.FinishedHandler = func() {
+        fmt.Println("finished task queue")
+    }
 
     // Start processing the queue with a pool of 25 workers, which will
     // works simultaniously on processing the queue.
     // This function will block the current thread until all tasks in the
     // queue are finished.
-	w.Start(25)
+    w.Start(25)
 }
 ```
 

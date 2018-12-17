@@ -68,7 +68,7 @@ func main() {
 }
 ```
 
-Further examples, you can find in the [examples](examples) directory.
+Further examples, you can find in the [example](example) directory.
 
 ---
 

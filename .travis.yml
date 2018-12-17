@@ -4,4 +4,4 @@ go:
   - tip
 
 script:
-  - bash test.sh
+  - bash coveralls-test.sh

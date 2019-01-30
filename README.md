@@ -74,5 +74,5 @@ Further examples, you can find in the [example](example) directory.
 
 ---
 
-Copyright (c) 2018 zekro Development (Ringo Hoffmann).
-Covered with MIT licence.
+Copyright (c) 2018 zekro Development (Ringo Hoffmann).  
+Covered by MIT licence.
